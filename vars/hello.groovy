@@ -1,23 +1,22 @@
 import com.akashnani.BuildStep
-
-pipeline{
-
-  agent any
-  stages{
-    stage("Build"){
-      script{
-        buildStep()
-      }
-    }
-    post{
-      success{
+def call(){
+  pipeline{
+    agent any
+    stages{
+      stage("Build"){
         script{
-          buildStepSuccess()
+          buildStep()
+        }
+      }
+      post{
+        success{
+          script{
+            buildStepSuccess()
+          }
         }
       }
     }
   }
-
 }
 
 def buildStep(){
