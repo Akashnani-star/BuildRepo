@@ -5,8 +5,10 @@ def call(){
     agent any
     stages{
       stage("Build"){
-        script{
-          buildStep(this)
+        steps{
+          script{
+            buildStep(this)
+          }
         }
       }
       post{
