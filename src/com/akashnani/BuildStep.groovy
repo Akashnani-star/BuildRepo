@@ -3,7 +3,7 @@ class BuildStep{
   def build(sc){
     sc.echo "buildied"
   }
-  def buildVeirfy(sc){
+  def buildVerify(sc){
     sc.echo "buildStepVerifying"
   }
 }
