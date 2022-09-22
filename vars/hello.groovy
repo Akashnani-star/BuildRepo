@@ -5,13 +5,13 @@ def call(){
     stages{
       stage("Build"){
         script{
-          buildStep()
+          buildStep(this)
         }
       }
       post{
         success{
           script{
-            buildStepSuccess()
+            buildStepSuccess(this)
           }
         }
       }
@@ -19,10 +19,10 @@ def call(){
   }
 }
 
-def buildStep(){
-  new BuildStep().build()
+def buildStep(script){
+  new BuildStep().build(script)
 }
 
-def buildStepSuccess(){
-  new BuildStep().buildVerify()
+def buildStepSuccess(script){
+  new BuildStep().buildVerify(script)
 }
