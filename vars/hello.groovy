@@ -1,4 +1,4 @@
-import com.akashnani.Buildstep
+import com.akashnani.BuildStep
 
 pipeline{
 
