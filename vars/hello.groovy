@@ -10,11 +10,11 @@ def call(){
             buildStep(this)
           }
         }
-      }
-      post{
-        success{
-          script{
-            buildStepSuccess(this)
+        post{
+          success{
+            script{
+              buildStepSuccess(this)
+            }
           }
         }
       }
