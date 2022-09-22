@@ -1,3 +1,5 @@
+import com.akashnani.BuildStep
+
 def call(){
   pipeline{
     agent any
