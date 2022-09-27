@@ -1,3 +1,4 @@
+import com.akashnani.BuildStep;
 def call(){
   pipeline{
     agent any
@@ -5,6 +6,9 @@ def call(){
       stage("Build"){
         steps{
           echo "build"
+          script{
+            buildStep(this)
+          }
         }
         post{
           success{
@@ -14,4 +18,9 @@ def call(){
       }
     }
   }
+}
+
+
+def buildStep(sc){
+   new BuildStep().build()
 }
