@@ -6,12 +6,14 @@ def call(){
     stages{
       stage("Build"){
         steps{
+          echo "build"
           script{
             buildStep(this)
           }
         }
         post{
           success{
+            echo "build success"
             script{
               buildStepSuccess(this)
             }
