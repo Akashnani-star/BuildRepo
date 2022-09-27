@@ -22,5 +22,5 @@ def call(){
 
 
 def buildStep(sc){
-   new BuildStep().build()
+   new BuildStep().build(sc)
 }
